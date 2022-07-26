@@ -19,10 +19,10 @@ public class Practice_03_2 {
 		return answer;
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Practice_03_2 T = new Practice_03_2();
 		Scanner kb = new Scanner(System.in);
 		String str = kb.nextLine(); //문자열을 입력받아야하기 때문에 nextLine() 사용
+		kb.close();
 		System.out.println(T.solution(str));
 	}
 }

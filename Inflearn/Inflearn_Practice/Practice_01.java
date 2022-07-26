@@ -24,6 +24,7 @@ public class Practice_01 {
 		Practice_01 T = new Practice_01(); //객체 생성
 		Scanner kb = new Scanner(System.in);
 		String str = kb.next();
+		kb.close();
 		char ch = kb.next().charAt(0); // 한 문자 받기
 		System.err.println(T.solution(str, ch));
 	}

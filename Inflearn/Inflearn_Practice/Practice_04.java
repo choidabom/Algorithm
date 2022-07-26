@@ -1,71 +1,32 @@
 package Inflearn.Inflearn_Practice;
 
-//N°³ÀÇ ´Ü¾î°¡ ÁÖ¾îÁö¸é °¢ ´Ü¾î¸¦ µÚÁý¾î Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥ ÀÛ¼º
-//Ã¹ ÁÙ¿¡ ÀÚ¿¬¼ö N(3<=N<=10) ÁÖ¾îÁü.
-//µÎ ¹øÂ° ÁÙºÎÅÍ N°³ÀÇ ´Ü¾î°¡ °¢ ÁÙ¿¡ ÇÏ³ª¾¿ ÁÖ¾îÁü,
-//N°³ÀÇ ´Ü¾î¸¦ ÀÔ·ÂµÈ ¼ø¼­´ë·Î ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ µÚÁý¾î Ãâ·ÂÇÑ´Ù.
+// Nê°œì˜ ë‹¨ì–´ê°€ ì£¼ì–´ì§€ë©´ ê° ë‹¨ì–´ë¥¼ ë’¤ì§‘ì–´ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨
+// ì²« ì¤„ì— ìžì—°ìˆ˜ N(3<=N<=20)
+// ë‘ë²ˆì§¸ ì¤„ë¶€í„° Nê°œì˜ ë‹¨ì–´ê°€ ê° ì¤„ì— í•˜ë‚˜ì”© ì£¼ì–´ì§
+import java.util.ArrayList;
+import java.util.Scanner;
 
-import java.util.*;
-//
-//public class String_04 {
-//	public ArrayList<String> solution(int n, String[] str) {
-//		ArrayList<String> answer = new ArrayList<String>();
-//		
-//		return answer;
-//	}
-//	public static void main(String[] args) {
-//		String_04 T = new String_04();
-////	Scanner kb = new Scanner(System.in);
-//		int n = kb.nextInt();			// Ã¹ ÁÙ¿¡ ÀÚ¿¬¼ö NÀÌ ÁÖ¾îÁü.
-//		String[] str = new String[n];	// N°³ÀÇ ´Ü¾î
-//		// String[] str = kb.nextLine();//¹è¿­Àº nextLine()À¸·Î ¹ÞÁö ¸ø ÇÔ.
-//		for(int i=0; i<n; i++) {		
-//			str[i] = kb.next();			// N°³ÀÇ ´Ü¾î¸¦ ÀÔ·Â¹ÞÀ½.
-//		}
-//		
-//		
-//		System.out.println(T.solution(n, str));
-//	}
-//}
-
-
-
-public class String_04 {
-	/*
-	public String solution(String str) {
-		String answer = "";
-		
-		
-		
-		for(int i = arr[-1]; i >= 0 ; i--) {
-			answer += arr[i];
+public class Practice_04{
+	public ArrayList<String> solution(int n, String[] str){
+		ArrayList<String> answer = new ArrayList<>();
+		for(String x : str){
+			String tmp = new StringBuilder(x).reverse().toString();
+			answer.add(tmp);
 		}
-		
 		return answer;
 	}
-	*/
 	public static void main(String[] args) {
-		String_04 T = new String_04();
+		Practice_04 T = new Practice_04();
 		Scanner kb = new Scanner(System.in);
-		String str = kb.nextLine();
-		String answer = "";
-		//System.out.println(T.solution(str));
-		char[] arr = str.toCharArray();
-		/*
-		 * int i = 0;
-		while(i <= arr.length) {
-			answer += arr[i];
-			i--;
-			if(i==0) {
-				break;
-			}
-		}
-		System.out.println(answer);
-		*/
-		for(int i = arr.length; i >= 0 ; i--) {
-			answer += arr[i];
-		}
-		System.out.println(answer);
-	}
+		kb.close();
 
-}
+		int n = kb.nextInt();			
+		String[] str = new String[n];	
+		for(int i = 0; i<n; i++){
+			str[i] = kb.next();
+		}
+		for(String x : T.solution(n, str)){
+			System.out.println(x);
+		}
+	}
+} 

@@ -36,6 +36,7 @@ public class Practice_03 {
 		// next()랑 nextLine()이랑 많이 다르다 ^_____^
 		// 단어가 아니라 문장을 입력받아야하기 때문에 nextLine()을 쓴다.
 		
+		kb.close();
 		System.out.println(T.solution(str));
 	}
 }

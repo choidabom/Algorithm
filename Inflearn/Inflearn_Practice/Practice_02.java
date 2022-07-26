@@ -20,6 +20,7 @@ public class Practice_02 {
 		Practice_02 T = new Practice_02();
 		Scanner kb = new Scanner(System.in);
 		String str = kb.next(); //문자열 입력받기
+		kb.close();
 		System.out.println(T.solution(str)); 
 	}
 }
